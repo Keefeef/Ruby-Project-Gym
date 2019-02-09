@@ -51,4 +51,4 @@ booking2 = Booking.new({
 booking2.save
 
 binding.pry
-nil 
+nil
