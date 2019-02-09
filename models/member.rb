@@ -15,6 +15,10 @@ class Member
     return "#{@first_name.capitalize}, #{@second_name.capitalize}"
   end
 
+  def age
+    return @age
+  end 
+
 
   def save()
     sql = "INSERT INTO members

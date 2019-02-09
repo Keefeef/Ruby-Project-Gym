@@ -1,0 +1,10 @@
+<h1><%= @member.pretty_name %> (member)</h1>
+
+<h3>Lessons</h3>
+
+<ul>
+  <% @member.lessons.each do |lesson| %>
+  <li><%= lesson.title %></li>
+  <% end %>
+</ul>
+<!--Want to list lesson day/time also  --> 
