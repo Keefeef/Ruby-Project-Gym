@@ -19,10 +19,10 @@ end
 post '/members' do
   member = Member.new(params) #This could be accessed by the add member button
   member.save                 #at the top of the members page
-  redirect to("/members")
+  erb(:'members/new')
 end
 
-post '/members/:id/delete' do 
+post '/members/:id/delete' do
   Member.delete(params[:id])
   redirect to("/members")
 end

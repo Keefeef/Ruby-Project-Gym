@@ -1,0 +1,10 @@
+<h1> Lesson <%= @lesson.title %> (lesson)</h1>
+
+
+<h3>Members</h3>
+
+<ul>
+  <% @lesson.member.each do |member| %>
+  <li><%= member.pretty_name %></li>
+  <% end %>
+</ul>

@@ -19,10 +19,10 @@ end
 post '/lessons' do
   lesson = Lesson.new(params) #Could be accessed by the add lesson button
   lesson.save
-  redirect to("/lessons")
+  erb(:'lessons/new')
 end
 
-post '/bitings/:id/delete' do
+post '/lessons/:id/delete' do
   Lesson.delete(params[:id])
   redirect to("/lessons")
 end

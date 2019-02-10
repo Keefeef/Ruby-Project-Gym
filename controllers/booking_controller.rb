@@ -11,20 +11,21 @@ get '/bookings' do
   @lessons = Lesson.all
   erb (:"bookings/index")
 end
+# Not sure about this method
 
-get '/bookings/new' do
-  @members = Member.all
-  @lessons = Lesson.all
-  erb(:"bookings/new")
-end
+# get '/bookings/new' do     Doing the same as the one below?
+#   @members = Member.all
+#   @lessons = Lesson.all
+#   erb(:"bookings/new")
+# end
 
 post '/bookings' do
   booking = Booking.new(params)
-  biting.save
-  redirect to("/bookings")
+  booking.save
+  erb (:'bookings/new')
 end
 
 post '/bookings/:id/delete' do
   Booking.delete(para,s[:id])
   redirect to("/bitings")
-end 
+end

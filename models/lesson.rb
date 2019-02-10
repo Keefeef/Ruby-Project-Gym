@@ -10,6 +10,14 @@ class Lesson
     @id = options['id'].to_i if options['id']
   end
 
+  def title
+    return @title
+  end
+
+  def day_time
+    return @day_time
+  end 
+
   def save()
   sql = "INSERT INTO lessons
   (

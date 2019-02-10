@@ -1,0 +1,23 @@
+<h1>Book a lesson!</h1>
+
+<form action="/bookings" method="post">
+  <label>
+  Select a member:
+    <select name="member_id">
+      <% for member in @members %>
+      <option value="<%= member.id %>"><%= member.name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <label>
+    Select a lesson:
+    <select name="lesson_id">
+      <% for lesson in @lessons %>
+      <option value="<%= lesson.id %>"><%= lesson.name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <input class="btn btn--action" type='submit' value="Booked!">
+</form>
