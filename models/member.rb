@@ -13,7 +13,7 @@ class Member
   end
 
   def pretty_name
-    return "#{@first_name.capitalize}, #{@second_name.capitalize}"
+    return "#{@first_name.capitalize} #{@second_name.capitalize}"
   end
 
   def age

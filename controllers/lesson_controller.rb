@@ -7,7 +7,7 @@ require_relative( '../models/booking.rb' )
 also_reload( '../models/*' )
 
 get '/lessons' do
-  @lessons = Lessons.all
+  @lessons = Lesson.all
   erb (:"lessons/index")
 end
 

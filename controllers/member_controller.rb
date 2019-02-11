@@ -11,14 +11,19 @@ get '/members' do
   erb (:"members/index")
 end
 
+get '/members/new' do
+  erb(:'members/new')
+end
+
 get '/members/:id' do
   @member = Member.find(params['id'].to_i)
   erb(:'members/show')
 end
 
+
 post '/members' do
-  member = Member.new(params) #This could be accessed by the add member button
-  member.save                 #at the top of the members page
+  @member = Member.new(params) #This could be accessed by the add member button
+  @member.save                 #at the top of the members page
   erb(:'members/new')
 end
 
