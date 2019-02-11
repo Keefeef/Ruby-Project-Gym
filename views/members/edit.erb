@@ -1,4 +1,4 @@
-<h1>Change Members Details</h1>
+<h1>Change <%= @member.pretty_name %>'s Details</h1>
 
 <form method="post" action="/members/<%= @member.id %>">
   <label for="first-name-field">First Name:</label>
@@ -6,6 +6,8 @@
   type="text"
   name="first_name"
   id="first-name-field"
+  value="<%= @member.first_name %>"
+  required
   />
 
 <label for="second-name-field">Second Name:</label>
@@ -13,6 +15,8 @@
 type="text"
 name="second_name"
 id="second-name-field"
+value="<%= @member.second_name %>"
+required
 />
 
 <label for="age-field">Age</label>
@@ -20,6 +24,8 @@ id="second-name-field"
 type="number"
 name="age"
 id="age-field"
+value="<%= @member.age %>"
+required
 />
 
 <input type="submit" value="Edit Member Details">

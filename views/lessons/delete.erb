@@ -1,4 +1,4 @@
-<h1> Are you sure you wish to delete this lesson? </h1>
+<h1> Are you sure you want to delete <%= @lesson.title %>? </h1>
 
 <form method="post" action="/lessons/<%= @lesson.id %>/delete">
   <input class="btn btn--action" type="submit" value="Yes">

@@ -8,15 +8,20 @@
     <th>Title</th>
     <th></th>
     <th>Day/Time</th>
+    <th></th>
+    <th>Change Details</th>
+    <th></th>
   </tr>
   <% for lesson in @lessons %>
   <tr>
     <td><a href="/lessons/<%= lesson.id %>"><%= lesson.title %>></a></td>
     <td>|</td>
     <td><%= lesson.day_time %></td>
+    <td>|</td>
     <td><form action="/lessons/<%= lesson.id %>/edit">
       <input class="btn btn--action" type="submit" value="Edit">
     </form></td>
+    <td>|</td>
     <td><form action="/lessons/<%= lesson.id %>/delete">
       <input class="btn btn--action" type="submit" value="Delete">
     </form></td>
