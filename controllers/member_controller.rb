@@ -17,8 +17,8 @@ end
 
 post '/members' do
   @member = Member.new(params) #This could be accessed by the add member button
-  @member.save                 #at the top of the members page
-  erb(:'members/new')
+  @member.save
+  redirect to('/members')            #at the top of the members page
 end
 
 get '/members/:id' do

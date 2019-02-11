@@ -18,7 +18,7 @@ end
 post '/lessons' do
   lesson = Lesson.new(params) #Could be accessed by the add lesson button
   lesson.save
-  erb(:'lessons/new')
+  redirect to ("/lessons")
 end
 
 get '/lessons/:id' do
