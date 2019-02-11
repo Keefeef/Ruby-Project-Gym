@@ -31,7 +31,7 @@ class Lesson
   )
   RETURNING id"
   values = [@title, @day_time]
-  results = SqlRunner.run(sql, values)
+  results = SqlRunner.run(sql, values)  #WORKS
   @id = results.first()['id'].to_i
 end
 
@@ -48,34 +48,34 @@ def update
          SET title = $1,
          day_time = $2
          WHERE id = $3"
-  values = [@title, @day_time, @id]
+  values = [@title, @day_time, @id] #WORKS
   SqlRunner.run(sql, values)
 end
 
 def self.all()
   sql = "SELECT * FROM lessons"
   results = SqlRunner.run( sql )
-  return results.map { |lesson| Lesson.new( lesson ) }
+  return results.map { |lesson| Lesson.new( lesson ) } #WORKS
 end
 
 def self.find( id )
   sql = "SELECT * FROM lessons
   WHERE id = $1"
-  values = [@id]
-  results = SqlRunner.run( sql, values )
+  values = [id]
+  results = SqlRunner.run( sql, values ) #WORKS
   return Lesson.new( results.first )
 end
 
 def self.delete_all()
   sql = "DELETE FROM lessons"
-  SqlRunner.run( sql )
+  SqlRunner.run( sql ) #WORKS
 end
 
 def self.delete(id)
   sql = "DELETE FROM lessons
   WHERE id = $1"
   values = [@id]
-  SqlRunner.run( sql, values )
+  SqlRunner.run( sql, values ) #PRY accepts but doesnt alter DB
 end
 
 

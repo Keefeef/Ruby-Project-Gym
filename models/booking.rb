@@ -23,7 +23,7 @@ class Booking
   RETURNING id"
   values = [@member_id, @lesson_id]
   results = SqlRunner.run(sql, values)
-  @id = results.first()['id'].to_i
+  @id = results.first()['id'].to_i #WORKS
 end
 
 def update
@@ -31,34 +31,34 @@ def update
          SET member_id = $1,
          lesson_id = $2
          WHERE id = $3"
-  values = [@member_id, @lesson_id, @id]
+  values = [@member_id, @lesson_id, @id] #Doesnt work but is it needed??
   SqlRunner.run(sql, values)
 end
 
 def self.all()
   sql = "SELECT * FROM bookings"
   results = SqlRunner.run( sql )
-  return results.map { |booking| Booking.new( booking ) }
+  return results.map { |booking| Booking.new( booking ) } #WORKS
 end
 
 def self.find( id )
   sql = "SELECT * FROM bookings
   WHERE id = $1"
-  values = [@id]
+  values = [id]
   results = SqlRunner.run( sql, values )
-  return Booking.new( results.first )
+  return Booking.new( results.first ) #WORKS
 end
 
 def self.delete_all()
   sql = "DELETE FROM bookings"
-  SqlRunner.run( sql )
+  SqlRunner.run( sql ) #WORKS
 end
 
 def self.delete(id)
   sql = "DELETE FROM bookings
   WHERE id = $1"
   values = [@id]
-  SqlRunner.run( sql, values )
+  SqlRunner.run( sql, values ) #Accepts command but doesnt alter DB
 end
 
 end
