@@ -1,0 +1,23 @@
+<h1> All Current Bookings</h1>
+
+<table>
+<tr>
+<th>Name</th>
+<th></th>
+<th>Lesson</th>
+<th></th>
+
+</tr>
+<% for booking in @bookings %>
+<tr>
+<td><a href="/bookings/<%= booking.id %>"><%= booking.member_id %>></a></td>
+<td>|</td>
+<td><%= booking.lesson_id %></td>
+<td>|</td>
+
+</tr>
+
+</table>
+
+
+<% end %>

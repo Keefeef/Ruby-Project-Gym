@@ -10,6 +10,15 @@ class Booking
     @id = options['id'].to_i if options['id']
   end
 
+
+  def member_id
+    return @member_id
+  end
+
+  def lesson_id
+    return @lesson_id
+  end 
+
   def save()
   sql = "INSERT INTO bookings
   (
@@ -25,6 +34,7 @@ class Booking
   results = SqlRunner.run(sql, values)
   @id = results.first()['id'].to_i #WORKS
 end
+
 
 def update
   sql = "UPDATE bookings

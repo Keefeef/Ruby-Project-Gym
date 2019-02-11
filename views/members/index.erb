@@ -23,12 +23,6 @@
       <input class="btn btn--action" type="submit" value="Edit">
     </form></td>
     <td>|</td>
-    <td><form action="/"
-
-
-
-
-
     <td><form action="/members/<%= member.id %>/delete">
       <input class="btn btn--action" type="submit" value="Delete">
     </form></td>
@@ -36,3 +30,8 @@
   </tr>
   <% end %>
 </table>
+<br>
+<br>
+<form action="/bookings/new">
+  <input class="btn btn--action" type="submit" value="Add member to lesson">
+  </form>
