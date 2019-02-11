@@ -1,0 +1,26 @@
+<h1>Change Members Details</h1>
+
+<form method="post" action="/members/<%= @member.id %>">
+  <label for="first-name-field">First Name:</label>
+  <input
+  type="text"
+  name="first_name"
+  id="first-name-field"
+  />
+
+<label for="second-name-field">Second Name:</label>
+<input
+type="text"
+name="second_name"
+id="second-name-field"
+/>
+
+<label for="age-field">Age</label>
+<input
+type="number"
+name="age"
+id="age-field"
+/>
+
+<input type="submit" value="Edit Member Details">
+</form>

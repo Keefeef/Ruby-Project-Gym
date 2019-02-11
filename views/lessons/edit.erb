@@ -1,0 +1,22 @@
+<h1>Change Lesson Details</h1>
+
+<form method="post" action="/lessons/<%= @lesson.id %>">
+  <label for="title-field">Title:</label>
+  <input
+  type="text"
+  name="title"
+  id="title-field"
+  />
+
+<label for="day/time-field">Day/Time:</label>
+<input
+type="text"
+name="day_time"
+id="day/time-field"
+/>
+
+<!--Would like to enter a description label/input but does this need to be a property of the lesson class?  -->
+
+
+<input type="submit" value="Edit lesson">
+</form>

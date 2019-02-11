@@ -8,7 +8,7 @@
     <th></th>
     <th>Age</th>
     <th></th>
-    <th>Description</th>
+    <th>Change Details</th>
 
   </tr>
   <% for member in @members %>
@@ -17,7 +17,10 @@
     <td>|</td>
     <td><%= member.age %></td>
     <td>|</td>
-    <td><p>This is a description</p></td>
+    <td><form action="/members/<%= member.id %>/edit"> 
+      <input class="btn btn--action" type="submit" value="Edit">
+    </form></td>
+
   </tr>
   <% end %>
 </table>
