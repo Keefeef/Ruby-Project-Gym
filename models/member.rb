@@ -2,7 +2,8 @@ require_relative( '../db/sql_runner' )
 
 class Member
 
-  attr_reader :first_name, :second_name, :age, :id
+  attr_accessor :first_name, :second_name, :age
+  attr_reader :id
 
   def initialize( options )
     @first_name = options['first_name']
@@ -17,7 +18,7 @@ class Member
 
   def age
     return @age
-  end 
+  end
 
 
   def save()
@@ -32,7 +33,7 @@ class Member
       $1, $2, $3
     )
     RETURNING id"
-    values = [@first_name, @second_name, @age]
+    values = [@first_name, @second_name, @age] # WORKS
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -50,30 +51,35 @@ end
     second_name = $2,
     age = $3
     WHERE id = $4"
-    values = [@first_name, @second_name, @age, @id]
+    values = [@first_name, @second_name, @age, @id] # WORKS
     SqlRunner.run(sql, values)
   end
 
   def self.all()
     sql = "SELECT * FROM members"
     results = SqlRunner.run( sql )
-    return results.map { |member| Member.new( member ) }
+    return results.map { |member| Member.new( member ) } #WORKS
   end
 
   def self.find( id )
     sql = "SELECT * FROM members
     WHERE id = $1"
-    values = [@id]
-    results = SqlRunner.run( sql, values ).first
+    values = [id]
+    results = SqlRunner.run( sql, values ).first #WORKS
     member = Member.new(results)
     return member
   end
+
+  def self.delete_all()
+  sql = "DELETE FROM members"  #WORKS
+  SqlRunner.run( sql )
+end
 
   def self.delete(id)
     sql = "DELETE FROM members
     WHERE id = $1"
     values = [@id]
-    SqlRunner.run( sql, values )
+    SqlRunner.run( sql, values )  #Is accepted by pry but doesnt alter db
   end
 
 end

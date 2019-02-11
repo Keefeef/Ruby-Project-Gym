@@ -2,7 +2,7 @@ require_relative( '../db/sql_runner' )
 
 class Booking
 
-  attr_reader :first_name, :second_name, :age, :id 
+  attr_reader :first_name, :second_name, :id
 
   def initialize( options )
     @member_id = options['member_id'].to_i
@@ -47,6 +47,11 @@ def self.find( id )
   values = [@id]
   results = SqlRunner.run( sql, values )
   return Booking.new( results.first )
+end
+
+def self.delete_all()
+  sql = "DELETE FROM bookings"
+  SqlRunner.run( sql )
 end
 
 def self.delete(id)

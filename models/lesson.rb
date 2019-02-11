@@ -2,7 +2,8 @@ require_relative( '../db/sql_runner' )
 
 class Lesson
 
-  attr_reader :title, :day_time, :id
+  attr_accessor :title, :day_time
+  attr_reader :id
 
   def initialize( options )
     @title = options['title']
@@ -16,7 +17,7 @@ class Lesson
 
   def day_time
     return @day_time
-  end 
+  end
 
   def save()
   sql = "INSERT INTO lessons
@@ -63,6 +64,11 @@ def self.find( id )
   values = [@id]
   results = SqlRunner.run( sql, values )
   return Lesson.new( results.first )
+end
+
+def self.delete_all()
+  sql = "DELETE FROM lessons"
+  SqlRunner.run( sql )
 end
 
 def self.delete(id)
