@@ -26,6 +26,6 @@ post '/bookings' do
 end
 
 post '/bookings/:id/delete' do
-  Booking.delete(para,s[:id])
-  redirect to("/bitings")
+  Booking.delete(params[:id])
+  redirect to("/bookings")
 end

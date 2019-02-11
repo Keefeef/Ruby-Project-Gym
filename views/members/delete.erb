@@ -1,0 +1,10 @@
+<h1> Are you sure you wish to delete this member? </h1>
+
+<form method="post" action="/members/<%= @member.id %>/delete">
+  <input class="btn btn--action" type="submit" value="Yes">
+</form>
+<br>
+<br>
+<form action="/members">
+  <input class="btn btn--action" type="submit" value="No">
+</form>

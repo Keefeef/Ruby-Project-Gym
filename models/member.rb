@@ -78,8 +78,8 @@ end
   def self.delete(id)
     sql = "DELETE FROM members
     WHERE id = $1"
-    values = [@id]
-    SqlRunner.run( sql, values )  #Is accepted by pry but doesnt alter db
+    values = [id]
+    SqlRunner.run( sql, values )  #WORKS
   end
 
 end

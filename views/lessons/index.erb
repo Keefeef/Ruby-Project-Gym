@@ -17,6 +17,9 @@
     <td><form action="/lessons/<%= lesson.id %>/edit">
       <input class="btn btn--action" type="submit" value="Edit">
     </form></td>
+    <td><form action="/lessons/<%= lesson.id %>/delete">
+      <input class="btn btn--action" type="submit" value="Delete">
+    </form></td>
   </tr>
   <% end %>
 </table>

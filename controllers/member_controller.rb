@@ -20,6 +20,11 @@ get '/members/:id' do
   erb(:'members/show')
 end
 
+get '/members/:id/delete' do
+  @member = Member.find(params['id'].to_i)
+  erb(:'members/delete')
+end
+
 post '/members/:id' do
   member = Member.new(params)
   member.update

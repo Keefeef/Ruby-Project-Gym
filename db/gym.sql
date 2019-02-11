@@ -20,6 +20,6 @@ CREATE TABLE lessons
 CREATE TABLE bookings
 (
   id SERIAL8 primary key,
-  member_id INT8 references members(id),
-  lesson_id INT8 references lessons(id)
+  member_id INT8 references members(id) ON DELETE CASCADE,
+  lesson_id INT8 references lessons(id) ON DELETE CASCADE
 );

@@ -74,7 +74,7 @@ end
 def self.delete(id)
   sql = "DELETE FROM lessons
   WHERE id = $1"
-  values = [@id]
+  values = [id]
   SqlRunner.run( sql, values ) #PRY accepts but doesnt alter DB
 end
 

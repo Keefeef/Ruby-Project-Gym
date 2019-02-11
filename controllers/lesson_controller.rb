@@ -15,6 +15,13 @@ get '/lessons/new' do
   erb(:'lessons/new')
 end
 
+get '/lessons/:id/delete' do
+  @lesson = Lesson.find(params['id'].to_i)
+  erb(:'lessons/delete')
+end
+
+
+
 post '/lessons/:id' do
   lesson = Lesson.new(params)
   lesson.update
@@ -25,6 +32,11 @@ post '/lessons' do
   lesson = Lesson.new(params) #Could be accessed by the add lesson button
   lesson.save
   redirect to ("/lessons")
+end
+
+post '/lessons/:id/delete' do
+  Lesson.delete(params[:id])
+  redirect to("/lessons")
 end
 
 get '/lessons/:id' do
