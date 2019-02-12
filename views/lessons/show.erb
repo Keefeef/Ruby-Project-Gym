@@ -6,5 +6,7 @@
 <ul>
   <% @lesson.members.each do |member| %>
   <li><%= member.pretty_name %></li>
+  <li><%= member.status %></li>
+  <br>
   <% end %>
 </ul>
