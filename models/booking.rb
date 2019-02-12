@@ -59,7 +59,7 @@ def self.find( id )
   return Booking.new( results.first ) #WORKS
 end
 
-def member()
+def members()
   sql = "SELECT * FROM members
   WHERE id = $1"
   values = [@member_id]
