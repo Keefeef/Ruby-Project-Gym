@@ -20,6 +20,10 @@ get '/lessons/:id/delete' do
   erb(:'lessons/delete')
 end
 
+get '/lessons/:id/show' do
+  @lesson = Lesson.find(params['id'].to_i)
+  erb(:'lessons/show')
+end
 
 
 post '/lessons/:id' do
@@ -29,7 +33,7 @@ post '/lessons/:id' do
 end
 
 post '/lessons' do
-  lesson = Lesson.new(params) #Could be accessed by the add lesson button
+  lesson = Lesson.new(params)
   lesson.save
   redirect to ("/lessons")
 end
