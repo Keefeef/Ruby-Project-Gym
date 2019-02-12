@@ -22,7 +22,7 @@ class Lesson
 
   def capacity
     return @capacity
-  end 
+  end
 
   def save()
   sql = "INSERT INTO lessons
@@ -82,7 +82,7 @@ def self.delete(id)
   sql = "DELETE FROM lessons
   WHERE id = $1"
   values = [id]
-  SqlRunner.run( sql, values ) #PRY accepts but doesnt alter DB
+  SqlRunner.run( sql, values )
 end
 
 

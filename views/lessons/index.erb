@@ -9,6 +9,8 @@
     <th></th>
     <th>Day/Time</th>
     <th></th>
+    <th>Capacity</th>
+    <th></th>
     <th>See Registered Members</th>
     <th></th>
     <th>Change Details</th>
@@ -20,8 +22,11 @@
     <td><a href="/lessons/<%= lesson.id %>"><%= lesson.title %>></a></td>
     <td>|</td>
     <td><%= lesson.day_time %></td>
-    <td>|</td>
 
+    <td>|</td>
+    <td><%= lesson.capacity %></td>
+    <td>|</td>
+    
 
     <td><form action="/lessons/<%= lesson.id %>/show">
       <input class="btn btn--action" type="submit" value="View">
@@ -34,7 +39,7 @@
     </form></td>
     <td>|</td>
 
-    
+
     <td><form action="/lessons/<%= lesson.id %>/delete">
       <input class="btn btn--action" type="submit" value="Delete">
     </form></td>
