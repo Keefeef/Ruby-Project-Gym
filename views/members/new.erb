@@ -6,6 +6,7 @@
   type="text"
   name="first_name"
   id="first-name-field"
+  required
   />
 
 <label for="second-name-field">Second Name:</label>
@@ -13,6 +14,7 @@
 type="text"
 name="second_name"
 id="second-name-field"
+required
 />
 
 <label for="age-field">Age</label>
@@ -20,7 +22,19 @@ id="second-name-field"
 type="number"
 name="age"
 id="age-field"
+required
 />
+
+<label>
+Select Status:
+  <select name="status">
+
+    <option value="standard">Standard</option>
+    <option value="premium">Premium</option>
+      
+
+  </select>
+</label>
 
 <input type="submit" value="Register new member">
 </form>
