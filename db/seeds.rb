@@ -37,21 +37,24 @@ member3.save
 
 lesson1 = Lesson.new({
 "title" => "Yoga",
-"day_time" => "Thursday 16:00"
+"day_time" => "Thursday 16:00",
+"capacity" => "6"
 })
 
 lesson1.save
 
 lesson2 = Lesson.new({
 "title" => "Pilates",
-"day_time" => "Tuesday 20:00"
+"day_time" => "Tuesday 20:00",
+"capacity" => "5"
 })
 
 lesson2.save
 
 lesson3 = Lesson.new({
 "title" => "Crossfit",
-"day_time" => "Monday 17:00"
+"day_time" => "Monday 17:00",
+"capacity" => "7"
 })
 
 lesson3.save

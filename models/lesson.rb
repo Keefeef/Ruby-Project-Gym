@@ -2,12 +2,13 @@ require_relative( '../db/sql_runner' )
 
 class Lesson
 
-  attr_accessor :title, :day_time
+  attr_accessor :title, :day_time, :capacity
   attr_reader :id
 
   def initialize( options )
     @title = options['title']
     @day_time = options['day_time']
+    @capacity = options['capacity']
     @id = options['id'].to_i if options['id']
   end
 
@@ -19,18 +20,23 @@ class Lesson
     return @day_time
   end
 
+  def capacity
+    return @capacity
+  end 
+
   def save()
   sql = "INSERT INTO lessons
   (
     title,
-    day_time
+    day_time,
+    capacity
   )
   VALUES
   (
-    $1, $2
+    $1, $2, $3
   )
   RETURNING id"
-  values = [@title, @day_time]
+  values = [@title, @day_time, @capacity]
   results = SqlRunner.run(sql, values)  #WORKS
   @id = results.first()['id'].to_i
 end
@@ -46,9 +52,10 @@ end
 def update
   sql = "UPDATE lessons
          SET title = $1,
-         day_time = $2
-         WHERE id = $3"
-  values = [@title, @day_time, @id] #WORKS
+         day_time = $2,
+         capacity = $3
+         WHERE id = $4"
+  values = [@title, @day_time, @capacity, @id] #WORKS
   SqlRunner.run(sql, values)
 end
 

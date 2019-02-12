@@ -14,7 +14,8 @@ CREATE TABLE lessons
 (
   id SERIAL8 primary key,
   title VARCHAR(255),
-  day_time VARCHAR(255)
+  day_time VARCHAR(255),
+  capacity INT4
 );
 
 CREATE TABLE bookings
