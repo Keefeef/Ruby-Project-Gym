@@ -21,14 +21,20 @@
     <td>|</td>
     <td><%= lesson.day_time %></td>
     <td>|</td>
+
+
     <td><form action="/lessons/<%= lesson.id %>/show">
       <input class="btn btn--action" type="submit" value="View">
       </form></td>
       <td>|</td>
+
+
     <td><form action="/lessons/<%= lesson.id %>/edit">
       <input class="btn btn--action" type="submit" value="Edit">
     </form></td>
     <td>|</td>
+
+    
     <td><form action="/lessons/<%= lesson.id %>/delete">
       <input class="btn btn--action" type="submit" value="Delete">
     </form></td>

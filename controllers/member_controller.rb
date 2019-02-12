@@ -32,9 +32,9 @@ post '/members/:id' do
 end
 
 post '/members' do
-  @member = Member.new(params) #This could be accessed by the add member button
+  @member = Member.new(params)
   @member.save
-  redirect to('/members')            #at the top of the members page
+  redirect to('/members')
 end
 
 get'/members/:id/edit' do
@@ -42,13 +42,7 @@ get'/members/:id/edit' do
   erb(:'members/edit')
 end
 
-
-
-
-
 post '/members/:id/delete' do
   Member.delete(params[:id])
   redirect to("/members")
 end
-
-#Still need edit

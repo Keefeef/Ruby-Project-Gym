@@ -21,20 +21,30 @@
   <tr>
     <td><a href="/members/<%= member.id %>"><%= member.pretty_name %></a></td>
     <td>|</td>
+
+
     <td><%= member.age %></td>
     <td>|</td>
-    <td><form action="/bookings/new">
+
+
+    <td><form action="/bookings/<%= member.id %>/member_to_lesson">
       <input class="btn btn--action" type="submit" value="Add">
     </form></td>
     <td>|</td>
+
+
     <td><form action="/members/<%= member.id %>/show">
       <input class="btn btn--action" type="submit" value="View">
     </form></td>
     <td>|</td>
+
+
     <td><form action="/members/<%= member.id %>/edit">
       <input class="btn btn--action" type="submit" value="Edit">
     </form></td>
     <td>|</td>
+
+
     <td><form action="/members/<%= member.id %>/delete">
       <input class="btn btn--action" type="submit" value="Delete">
     </form></td>

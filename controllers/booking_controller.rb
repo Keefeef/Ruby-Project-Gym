@@ -12,7 +12,7 @@ get '/bookings' do
   @lessons = Lesson.all
   erb (:"bookings/index")
 end
-# Not sure about this method
+
 
 get '/bookings/new' do
   @members = Member.all
@@ -20,11 +20,22 @@ get '/bookings/new' do
   erb(:"bookings/new")
 end
 
+# get '/bookings/:id/member_to_lesson' do
+#   @lessons = Lesson.all
+#   erb(:"bookings/member_to_lesson")
+# end
+
 post '/bookings' do
-  booking = Booking.new(params)
-  booking.save
-  erb (:'bookings/new')
+  @booking = Booking.new(params)
+  @booking.save
+  redirect to('/bookings')
 end
+
+# post '/bookings' do
+#   booking = Booking.new(params)
+#   booking.save
+#   erb (:'bookings/member_to_lesson')
+# end
 
 post '/bookings/:id/delete' do
   Booking.delete(params[:id])
