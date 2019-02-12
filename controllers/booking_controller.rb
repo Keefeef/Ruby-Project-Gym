@@ -20,10 +20,10 @@ get '/bookings/new' do
   erb(:"bookings/new")
 end
 
-# get '/bookings/:id/member_to_lesson' do
-#   @lessons = Lesson.all
-#   erb(:"bookings/member_to_lesson")
-# end
+get '/bookings/:id/delete' do
+  @booking = Booking.find(params['id'].to_i)
+  erb(:'bookings/delete')
+end
 
 post '/bookings' do
   @booking = Booking.new(params)
@@ -31,11 +31,16 @@ post '/bookings' do
   redirect to('/bookings')
 end
 
-# post '/bookings' do
-#   booking = Booking.new(params)
-#   booking.save
-#   erb (:'bookings/member_to_lesson')
-# end
+post '/bookings/:id/delete' do
+  Booking.delete(params[:id])
+  redirect to("/bookings")
+end
+
+
+get '/bookings/:id/member_to_lesson' do
+  @lessons = Lesson.all
+  erb(:"bookings/member_to_lesson")
+end
 
 post '/bookings/:id/delete' do
   Booking.delete(params[:id])
