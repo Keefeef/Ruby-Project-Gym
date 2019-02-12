@@ -10,7 +10,8 @@ Member.delete_all
 member1 = Member.new({
 "first_name" => "Frank",
 "second_name" => "Reynolds",
-"age" => "63"
+"age" => "63",
+"status" => "Premium"
 })
 
 member1.save
@@ -18,7 +19,8 @@ member1.save
 member2 = Member.new({
 "first_name" => "Charlie",
 "second_name" => "Kelly",
-"age" => "38"
+"age" => "38",
+"status" => "Standard"
 })
 
 member2.save
@@ -26,7 +28,8 @@ member2.save
 member3 = Member.new({
 "first_name" => "Dennis",
 "second_name" => "Reynolds",
-"age" => "42"
+"age" => "42",
+"status" => "Premium"
 })
 
 member3.save

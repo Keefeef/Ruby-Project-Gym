@@ -8,7 +8,7 @@ class Lesson
   def initialize( options )
     @title = options['title']
     @day_time = options['day_time']
-    @capacity = options['capacity']
+    @capacity = options['capacity'].to_i
     @id = options['id'].to_i if options['id']
   end
 
@@ -23,6 +23,16 @@ class Lesson
   def capacity
     return @capacity
   end
+
+  def add_member
+    @capacity -= 1
+  end
+
+  # def show_capacity(num)
+  #   if num >= @capacity return "Sorry theres no space left"
+  #   else num -= @capacity
+  #   end
+  # end
 
   def save()
   sql = "INSERT INTO lessons
