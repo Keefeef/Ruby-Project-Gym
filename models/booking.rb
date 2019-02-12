@@ -17,7 +17,7 @@ class Booking
 
   def lesson_id
     return @lesson_id
-  end 
+  end
 
   def save()
   sql = "INSERT INTO bookings
@@ -57,6 +57,22 @@ def self.find( id )
   values = [id]
   results = SqlRunner.run( sql, values )
   return Booking.new( results.first ) #WORKS
+end
+
+def member()
+  sql = "SELECT * FROM members
+  WHERE id = $1"
+  values = [@member_id]
+  results = SqlRunner.run( sql, values )
+  return Member.new( results.first )
+end
+
+def lesson()
+  sql = "SELECT * FROM lessons
+  WHERE id = $1"
+  values = [@lesson_id]
+  results = SqlRunner.run( sql, values )
+  return Lesson.new( results.first )
 end
 
 def self.delete_all()

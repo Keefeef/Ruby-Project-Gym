@@ -4,7 +4,7 @@
 <h3>Members</h3>
 
 <ul>
-  <%= @lesson.members.each do |member| %>
+  <% @lesson.members.each do |member| %>
   <li><%= member.pretty_name %></li>
   <% end %>
 </ul>
