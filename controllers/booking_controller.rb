@@ -19,6 +19,7 @@ get '/bookings/new' do
   @lessons = Lesson.all
   erb(:"bookings/new")
 end
+
 get '/bookings/:id/delete' do
   @booking = Booking.find(params['id'].to_i)
   erb(:'bookings/delete')

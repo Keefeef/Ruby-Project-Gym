@@ -1,7 +1,5 @@
 <h2> <%= @member.pretty_name %>'s Lessons</h2>
 
-<h3>Lessons</h3>
-
 <ul>
   <% @member.lessons.each do |lesson| %>
   <li><%= lesson.title %></li>
