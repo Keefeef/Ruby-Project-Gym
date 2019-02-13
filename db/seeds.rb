@@ -34,6 +34,24 @@ member3 = Member.new({
 
 member3.save
 
+member4 = Member.new({
+"first_name" => "Dee",
+"second_name" => "Reynolds",
+"age" => "42",
+"status" => "Premium"
+})
+
+member4.save
+
+member5 = Member.new({
+"first_name" => "Ronald",
+"second_name" => "Macdonald",
+"age" => "37",
+"status" => "Standard"
+})
+
+member5.save
+
 
 
 
@@ -61,6 +79,22 @@ lesson3 = Lesson.new({
 })
 
 lesson3.save
+
+lesson4 = Lesson.new({
+"title" => "Drinking",
+"day_time" => "Monday 09:00",
+"capacity" => "7"
+})
+
+lesson4.save
+
+lesson5 = Lesson.new({
+"title" => "Cycling",
+"day_time" => "Monday 17:00",
+"capacity" => "8"
+})
+
+lesson5.save
 
 booking1 = Booking.new({
 "member_id" => member1.id,
