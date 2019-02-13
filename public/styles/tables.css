@@ -1,0 +1,41 @@
+table {
+  width: 80%;
+  border: 1px solid #e5c827;
+  border-collapse: collapse;
+  display: table-row-group;
+  vertical-align: middle;
+}
+
+th {
+  height: 50px;
+  text-align: center;
+  border: 1px solid orange;
+  padding: 10px 20px 10px 10px;
+}
+
+tr {
+  height:auto;
+  border: 1px solid #e5c827;
+}
+
+td {
+  height:auto;
+  border: 1px solid #e5c827;
+  display: table-cell;
+  padding-left: 10px;
+}
+a:active {
+    background-color: orange;
+}
+
+a:link {
+    color: orange;
+}
+
+a:visited {
+    color: orange;
+}
+
+a:hover {
+    color: green;
+}

@@ -1,8 +1,8 @@
 <h1>Book a lesson!</h1>
-
+<!--Need to find a way to insert the member id  -->
 <form method="post" action="/bookings" >
   <label>
-    Select a lesson:
+    Select a lesson
     <select name="lesson_id">
       <% for lesson in @lessons %>
       <option value="<%= lesson.id %>"><%= lesson.title %></option>
