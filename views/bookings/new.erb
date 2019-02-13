@@ -14,7 +14,10 @@
     Select a lesson:
     <select name="lesson_id">
       <% for lesson in @lessons %>
+      <% if lesson.spare_capacity > 0 %>
       <option value="<%= lesson.id %>"><%= lesson.title %></option>
+      <% else %>
+      <% end %>
       <% end %>
     </select>
   </label>
