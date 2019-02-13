@@ -11,6 +11,8 @@
     <th></th>
     <th>Capacity</th>
     <th></th>
+    <th>Remaining Space</th>
+    <th></th>
     <th>See Registered Members</th>
     <th></th>
     <th>Change Details</th>
@@ -28,6 +30,10 @@
     <td>|</td>
     <td><%= lesson.capacity %></td>
     <td>|</td>
+
+    <td><%= lesson.spare_capacity %></td>
+    <td>|</td>
+
 
 
     <td><form action="/lessons/<%= lesson.id %>/show">
