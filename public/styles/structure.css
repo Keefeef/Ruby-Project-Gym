@@ -1,0 +1,74 @@
+body {
+  background: black url('/images/background-faded.jpg');
+  background-repeat: no-repeat;
+  color: rgb(229, 97, 16);
+  font-family: serif;
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1 {
+  color: green;
+  font-family: fantasy;
+  font-size: 60px;
+
+}
+
+
+nav {
+  list-style: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0;
+}
+
+nav li {
+  margin: 0px;
+  display:
+}
+
+nav li a {
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: fantasy;
+  color: green;
+  float: left
+}
+
+nav li a:hover {
+  color: #FFFFFF;
+  background-color: #35af3b;
+}
+
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+main {
+  padding: 25px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+#content {
+  border-left: 1px solid DarkOrange;
+  padding-left: 25px;
+}

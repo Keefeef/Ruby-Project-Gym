@@ -50,9 +50,9 @@ def members()
 end
 
 def spare_capacity
-spare_capacity = @capacity -=  Lesson.members.length
+spare_capacity = @capacity -= Lesson.members.length
 return spare_capacity
-end 
+end
 
 def update
   sql = "UPDATE lessons
