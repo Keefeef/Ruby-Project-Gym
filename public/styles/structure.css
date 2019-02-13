@@ -1,5 +1,5 @@
 body {
-  background: black url('/images/background-faded.jpg');
+  background: white url('/images/background-faded.jpg');
   background-repeat: no-repeat;
   color: rgb(229, 97, 16);
   font-family: serif;
@@ -12,6 +12,7 @@ h1 {
   color: green;
   font-family: fantasy;
   font-size: 60px;
+  text-align: center;
 
 }
 
@@ -37,16 +38,17 @@ nav li {
 
 nav li a {
   padding: 10px;
+  font-size: 30px;
   text-decoration: none;
   font-weight: bold;
   font-family: fantasy;
   color: green;
-  float: left
+  float: left;
 }
 
 nav li a:hover {
-  color: #FFFFFF;
-  background-color: #35af3b;
+  color: green;
+  background-color: green;
 }
 
 
@@ -69,6 +71,6 @@ main {
 }
 
 #content {
-  border-left: 1px solid DarkOrange;
+  border-left: 1px solid green;
   padding-left: 25px;
 }
