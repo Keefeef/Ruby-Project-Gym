@@ -1,7 +1,7 @@
 body {
-  background: white url('/images/background-faded.jpg');
+  background: white url('/images/background.jpg');
   background-repeat: no-repeat;
-  color: rgb(229, 97, 16);
+  color: orange;
   font-family: serif;
   font-size: 20px;
   padding: 0px;
@@ -13,7 +13,17 @@ h1 {
   font-family: fantasy;
   font-size: 60px;
   text-align: center;
+}
 
+h2 {
+  margin-top: 120px;
+  color: orange;
+  font-size: 40px;
+  text-align: left;
+}
+
+p {
+  font-size: 30px;
 }
 
 
@@ -47,8 +57,7 @@ nav li a {
 }
 
 nav li a:hover {
-  color: green;
-  background-color: green;
+  background-color: orange;
 }
 
 
