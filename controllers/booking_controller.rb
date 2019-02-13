@@ -41,8 +41,3 @@ get '/bookings/:id/member_to_lesson' do
   @lessons = Lesson.all
   erb(:"bookings/member_to_lesson")
 end
-
-post '/bookings/:id/delete' do
-  Booking.delete(params[:id])
-  redirect to("/bookings")
-end
