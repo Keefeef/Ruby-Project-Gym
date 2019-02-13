@@ -41,7 +41,7 @@ def update
          SET member_id = $1,
          lesson_id = $2
          WHERE id = $3"
-  values = [@member_id, @lesson_id, @id] #Doesnt work but is it needed??
+  values = [@member_id, @lesson_id, @id] 
   SqlRunner.run(sql, values)
 end
 
@@ -83,8 +83,8 @@ end
 def self.delete(id)
   sql = "DELETE FROM bookings
   WHERE id = $1"
-  values = [@id]
-  SqlRunner.run( sql, values ) #Accepts command but doesnt alter DB
+  values = [id]
+  SqlRunner.run( sql, values )
 end
 
 end

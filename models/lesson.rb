@@ -24,16 +24,6 @@ class Lesson
     return @capacity
   end
 
-  def add_member
-    @capacity -= 1
-  end
-
-  # def show_capacity(num)
-  #   if num >= @capacity return "Sorry theres no space left"
-  #   else num -= @capacity
-  #   end
-  # end
-
   def save()
   sql = "INSERT INTO lessons
   (
@@ -58,6 +48,11 @@ def members()
   results = SqlRunner.run(sql, values)
   return results.map { |member| Member.new(member) }
 end
+
+def spare_capacity
+spare_capacity = @capacity -=  Lesson.members.length
+return spare_capacity
+end 
 
 def update
   sql = "UPDATE lessons
