@@ -1,6 +1,6 @@
 table {
   width: 80%;
-  border: 1px solid #e5c827;
+  border: 1px solid black;
   border-collapse: collapse;
   display: table-row-group;
   vertical-align: middle;
@@ -9,33 +9,33 @@ table {
 th {
   height: 50px;
   text-align: center;
-  border: 1px solid orange;
+  border: 1px solid black;
   padding: 10px 20px 10px 10px;
 }
 
 tr {
   height:auto;
-  border: 1px solid #e5c827;
+  border: 1px solid black;
 }
 
 td {
   height:auto;
-  border: 1px solid #e5c827;
+  border: 1px solid black;
   display: table-cell;
   padding-left: 10px;
 }
 a:active {
-    background-color: orange;
+    background-color: green;
 }
 
 a:link {
-    color: orange;
+    color: black;
 }
 
 a:visited {
-    color: orange;
+    color: black;
 }
 
 a:hover {
-    color: green;
+    color: black;
 }

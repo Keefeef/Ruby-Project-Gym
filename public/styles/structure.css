@@ -1,15 +1,16 @@
 
-header img {
-  align-self: center;
-}
+
 body {
   background: white url('/images/background.jpg');
+  background-color: rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
-  color: orange;
+  color: black;
   font-family: serif;
-  font-size: 20px;
+  font-size: 30px;
   padding: 0px;
   margin: 0px;
+  font-style: italic;
+  text-shadow: white 0px 0px 10px;
 }
 
 h1 {
@@ -20,7 +21,7 @@ h1 {
 }
 
 h2 {
-  margin-top: 120px;
+  margin-top: 150px;
   color: orange;
   font-size: 40px;
   text-align: left;
@@ -31,8 +32,6 @@ h3 {
   color: orange;
   font-size: 40px;
   text-align: left;
-
-
 }
 
 p {
@@ -47,6 +46,7 @@ nav {
   width: 100%;
   text-align: center;
 }
+
 li {
   font-size: 30px;
   color: orange;
@@ -57,16 +57,17 @@ nav ul {
   list-style-type: none;
   margin: 0px;
   padding: 0;
+  text-decoration: none;
 }
 
 nav li {
+
   margin: 0px;
-  display:
+  display: inline;
 }
 
 nav li a {
   padding: 10px;
-  font-size: 50px;
   text-decoration: none;
   font-weight: bold;
   font-family: fantasy;
@@ -98,6 +99,6 @@ main {
 }
 
 #content {
-  border-left: 1px solid green;
+  border-left: 1px solid black;
   padding-left: 25px;
 }

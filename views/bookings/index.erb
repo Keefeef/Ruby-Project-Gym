@@ -1,27 +1,27 @@
-<h2> All Current Bookings</h2>
+<h2>Current Bookings</h2>
 
 <table>
 <tr>
 <th>Name</th>
-<th></th>
+
 <th>Lesson</th>
-<th></th>
+
 <th>Day/Time</th>
-<th></th>
+
 <th>Remove</th>
 
 </tr>
 <% for booking in @bookings %>
 <tr>
 <td><a href="/bookings/<%= booking.id %>"><%= booking.members.pretty_name %></a></td>
-<td>|</td>
+
 
 
 <td><%= booking.lesson.title %></td>
-<td>|</td>
+
 
 <td><%= booking.lesson.day_time %></td>
-<td>|</td>
+
 
 <td><form action="/bookings/<%= booking.id %>/delete">
   <input class="btn btn--action" type="submit" value="Delete">
