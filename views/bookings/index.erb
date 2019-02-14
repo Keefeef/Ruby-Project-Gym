@@ -1,36 +1,36 @@
 <h2>Current Bookings</h2>
 
 <table>
-<tr>
-<th>Name</th>
+  <tr>
+    <th>Name</th>
 
-<th>Lesson</th>
+    <th>Lesson</th>
 
-<th>Day/Time</th>
+    <th>Day/Time</th>
 
-<th>Remove</th>
+    <th>Remove</th>
 
-</tr>
-<% for booking in @bookings %>
-<tr>
-<td><%= booking.members.pretty_name %></td>
-
-
-
-<td><%= booking.lesson.title %></td>
+  </tr>
+  <% for booking in @bookings %>
+  <tr>
+    <td><%= booking.members.pretty_name %></td>
 
 
-<td><%= booking.lesson.day_time %></td>
+
+    <td><%= booking.lesson.title %></td>
 
 
-<td><form action="/bookings/<%= booking.id %>/delete">
-  <input class="btn btn--action" type="submit" value="Delete">
-</form></td>
+    <td><%= booking.lesson.day_time %></td>
 
-</tr>
-<% end %>
+
+    <td><form action="/bookings/<%= booking.id %>/delete">
+      <input class="btn btn--action" type="submit" value="Delete">
+    </form></td>
+
+  </tr>
+  <% end %>
 </table>
 
 <form action="/bookings/new">
   <input class="btn btn--action" type="submit" value="Add Booking">
-  </form>
+</form>
