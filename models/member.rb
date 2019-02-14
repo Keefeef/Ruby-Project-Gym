@@ -45,11 +45,11 @@ class Member
   end
 
   def lessons
-  sql = "SELECT l.* FROM lessons l INNER JOIN bookings b ON b.lesson_id = l.id WHERE b.member_id = $1;"
-  values = [@id]
-  results = SqlRunner.run(sql, values)
-  return results.map { |lesson| Lesson.new(lesson) }
-end
+    sql = "SELECT l.* FROM lessons l INNER JOIN bookings b ON b.lesson_id = l.id WHERE b.member_id = $1;"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |lesson| Lesson.new(lesson) }
+  end
 
   def update
     sql = "UPDATE members
@@ -78,9 +78,9 @@ end
   end
 
   def self.delete_all()
-  sql = "DELETE FROM members"  #WORKS
-  SqlRunner.run( sql )
-end
+    sql = "DELETE FROM members"  #WORKS
+    SqlRunner.run( sql )
+  end
 
   def self.delete(id)
     sql = "DELETE FROM members
