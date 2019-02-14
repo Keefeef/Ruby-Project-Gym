@@ -1,6 +1,6 @@
 <h2>Lessons</h2>
 <form action="/lessons/new">
-<input class="btn btn--action" type='submit' value="Add Lesson">
+  <input class="btn btn--action" type='submit' value="Add Lesson">
 </form>
 
 <table>
@@ -38,7 +38,7 @@
 
     <td><form action="/lessons/<%= lesson.id %>/show">
       <input class="btn btn--action" type="submit" value="View">
-      </form></td>
+    </form></td>
 
 
 
@@ -54,6 +54,8 @@
   </tr>
   <% end %>
 </table>
+
+
 <form action="/bookings/new">
   <input class="btn btn--action" type="submit" value="Add Member to Lesson">
-  </form>
+</form>

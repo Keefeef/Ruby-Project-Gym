@@ -25,17 +25,17 @@ td {
   padding-left: 10px;
 }
 a:active {
-    background-color: green;
+  background-color: green;
 }
 
 a:link {
-    color: black;
+  color: black;
 }
 
 a:visited {
-    color: black;
+  color: black;
 }
 
 a:hover {
-    color: black;
+  color: black;
 }
