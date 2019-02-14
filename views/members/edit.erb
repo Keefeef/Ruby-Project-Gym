@@ -10,34 +10,34 @@
   required
   />
 
-<label for="second-name-field">Second Name:</label>
-<input
-type="text"
-name="second_name"
-id="second-name-field"
-value="<%= @member.second_name %>"
-required
-/>
+  <label for="second-name-field">Second Name:</label>
+  <input
+  type="text"
+  name="second_name"
+  id="second-name-field"
+  value="<%= @member.second_name %>"
+  required
+  />
 
-<label for="age-field">Age</label>
-<input
-type="number"
-name="age"
-id="age-field"
-value="<%= @member.age %>"
-required
-/>
+  <label for="age-field">Age</label>
+  <input
+  type="number"
+  name="age"
+  id="age-field"
+  value="<%= @member.age %>"
+  required
+  />
 
-<label>
-Select Status:
-  <select name="status">
+  <label>
+    Select Status:
+    <select name="status">
 
-    <option value="Standard">Standard</option>
-    <option value="Premium">Premium</option>
+      <option value="Standard">Standard</option>
+      <option value="Premium">Premium</option>
 
 
-  </select>
-</label>
+    </select>
+  </label>
 
-<input type="submit" value="Edit Member Details">
+  <input type="submit" value="Edit Member Details">
 </form>
